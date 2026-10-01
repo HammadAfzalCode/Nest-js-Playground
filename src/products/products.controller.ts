@@ -10,7 +10,7 @@ export class ProductsController {
   @Post()
   @UseGuards(ApiKeyGuard) // Protected: Requires 'x-api-key: super-secret-key' header
   create(@Body() createProductDto: CreateProductDto) {
-    return this.productsService.create(createProductDto);
+    return this.productsService.createProduct(createProductDto);
   }
 
   @Get()
